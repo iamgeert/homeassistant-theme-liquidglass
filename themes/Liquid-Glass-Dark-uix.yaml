@@ -183,7 +183,7 @@ Liquid-Glass-Dark-uix:
         {%- endif -%}
 
   uix-badge-yaml: |
-    $ mushroom-badge $: |
+    .: |
       @keyframes badgePulseGreen {
         0%   { filter: drop-shadow(0 0 2px rgba(0,255,136,0.35)) drop-shadow(0 0 6px rgba(0,255,136,0.20)); }
         50%  { filter: drop-shadow(0 0 8px rgba(0,255,136,0.90)) drop-shadow(0 0 18px rgba(0,255,136,0.60)) drop-shadow(0 0 28px rgba(0,255,136,0.35)); }
@@ -199,6 +199,7 @@ Liquid-Glass-Dark-uix:
         50%  { filter: drop-shadow(0 0 8px rgba(255,59,48,0.92)) drop-shadow(0 0 18px rgba(255,59,48,0.62)) drop-shadow(0 0 28px rgba(255,59,48,0.36)); }
         100% { filter: drop-shadow(0 0 2px rgba(255,59,48,0.35)) drop-shadow(0 0 6px rgba(255,59,48,0.20)); }
       }
+
 
   # =====================
   # card-mod (unchanged)
