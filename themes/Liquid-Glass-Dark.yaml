@@ -218,3 +218,52 @@ Liquid-Glass-Dark:
       background: none !important;
       backdrop-filter: none !important;
     }
+
+
+    @keyframes badgePulseGreen {
+      0% {
+        filter: drop-shadow(0 0 2px rgba(0,255,136,0.35))
+                drop-shadow(0 0 6px rgba(0,255,136,0.20));
+      }
+      50% {
+        filter: drop-shadow(0 0 8px rgba(0,255,136,0.90))
+                drop-shadow(0 0 18px rgba(0,255,136,0.60))
+                drop-shadow(0 0 28px rgba(0,255,136,0.35));
+      }
+      100% {
+        filter: drop-shadow(0 0 2px rgba(0,255,136,0.35))
+                drop-shadow(0 0 6px rgba(0,255,136,0.20));
+      }
+    }
+
+    @keyframes badgePulseYellow {
+      0% {
+        filter: drop-shadow(0 0 2px rgba(255,214,0,0.30))
+                drop-shadow(0 0 6px rgba(255,214,0,0.16));
+      }
+      50% {
+        filter: drop-shadow(0 0 8px rgba(255,214,0,0.75))
+                drop-shadow(0 0 18px rgba(255,214,0,0.42))
+                drop-shadow(0 0 26px rgba(255,214,0,0.22));
+      }
+      100% {
+        filter: drop-shadow(0 0 2px rgba(255,214,0,0.30))
+                drop-shadow(0 0 6px rgba(255,214,0,0.16));
+      }
+    }
+
+    @keyframes badgePulseRed {
+      0% {
+        filter: drop-shadow(0 0 2px rgba(255,59,48,0.35))
+                drop-shadow(0 0 6px rgba(255,59,48,0.20));
+      }
+      50% {
+        filter: drop-shadow(0 0 8px rgba(255,59,48,0.92))
+                drop-shadow(0 0 18px rgba(255,59,48,0.62))
+                drop-shadow(0 0 28px rgba(255,59,48,0.36));
+      }
+      100% {
+        filter: drop-shadow(0 0 2px rgba(255,59,48,0.35))
+                drop-shadow(0 0 6px rgba(255,59,48,0.20));
+      }
+    }
