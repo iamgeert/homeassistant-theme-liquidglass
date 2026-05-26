@@ -159,7 +159,7 @@ Liquid-Glass-Dark-uix:
         {%- set p = states(entity_id) | float(0) -%}
         {%- if p < 0 -%}badgePulseGreen 1.5s ease-in-out infinite
         {%- elif p >= 4000 -%}badgePulseRed 1.2s ease-in-out infinite
-        {%- elif p >= 100 -%}badgePulseYellow 1.8s ease-in-out infinite
+        {%- elif p >= 1000 -%}badgePulseYellow 1.8s ease-in-out infinite
         {%- else -%}none
         {%- endif -%}
     pulse_border_color:
@@ -169,7 +169,7 @@ Liquid-Glass-Dark-uix:
         {%- set p = states(entity_id) | float(0) -%}
         {%- if p < 0 -%}rgba(0, 255, 136, 0.9)
         {%- elif p >= 4000 -%}rgba(255, 59, 48, 0.95)
-        {%- elif p >= 1500 -%}rgba(255, 214, 0, 0.95)
+        {%- elif p >= 1000 -%}rgba(255, 214, 0, 0.95)
         {%- else -%}transparent
         {%- endif -%}
     pulse_text_color:
@@ -181,30 +181,6 @@ Liquid-Glass-Dark-uix:
         {%- elif p < 4000 -%}#FFD600
         {%- else -%}#ff3b30
         {%- endif -%}
-    p1_icon:
-      params:
-        - entity_id
-      template: >-
-        {%- set p = states(entity_id) | float(0) -%}
-        {%- if p < 0 -%}mdi:solar-power{%- else -%}mdi:flash{%- endif -%}
-    p1_content:
-      params:
-        - entity_id
-      template: >-
-        {%- set p = states(entity_id) | float(0) -%}
-        {{ p | round(0) }} W
-        {%- if p < 0 %} · Gratis elektriciteit
-        {%- elif p >= 4000 %} · Hoog verbruik
-        {%- elif p >= 1500 %} · Middel verbruik
-        {%- endif -%}
-    p1_color:
-      params:
-        - entity_id
-      template: >-
-        {%- set p = states(entity_id) | float(0) -%}
-        {%- if p < 0 -%}green
-        {%- elif p < 4000 -%}yellow
-        {%- else -%}red{%- endif -%}
 
   uix-badge-yaml: |
     .: |
