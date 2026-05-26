@@ -181,6 +181,30 @@ Liquid-Glass-Dark-uix:
         {%- elif p < 4000 -%}#FFD600
         {%- else -%}#ff3b30
         {%- endif -%}
+    p1_icon:
+      params:
+        - entity_id
+      template: >-
+        {%- set p = states(entity_id) | float(0) -%}
+        {%- if p < 0 -%}mdi:solar-power{%- else -%}mdi:flash{%- endif -%}
+    p1_content:
+      params:
+        - entity_id
+      template: >-
+        {%- set p = states(entity_id) | float(0) -%}
+        {{ p | round(0) }} W
+        {%- if p < 0 %} · Gratis elektriciteit
+        {%- elif p >= 4000 %} · Hoog verbruik
+        {%- elif p >= 1500 %} · Middel verbruik
+        {%- endif -%}
+    p1_color:
+      params:
+        - entity_id
+      template: >-
+        {%- set p = states(entity_id) | float(0) -%}
+        {%- if p < 0 -%}green
+        {%- elif p < 4000 -%}yellow
+        {%- else -%}red{%- endif -%}
 
   uix-badge-yaml: |
     .: |
