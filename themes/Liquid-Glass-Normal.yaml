@@ -1,4 +1,4 @@
-Liquid Glass:
+Liquid-Glass-Normal:
   modes:
     light:
       background-image: "center / cover no-repeat fixed url('https://raw.githubusercontent.com/Nezz/homeassistant-visionos-theme/refs/heads/static/macOS_26_Light.webp')"

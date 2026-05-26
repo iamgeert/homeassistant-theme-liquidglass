@@ -1,4 +1,4 @@
-visionos:
+Liquid-Glass-Dark:
   modes:
     light:
       background-image: "center / cover no-repeat fixed url('https://raw.githubusercontent.com/Nezz/homeassistant-visionos-theme/1.1/themes/day.jpg')"
