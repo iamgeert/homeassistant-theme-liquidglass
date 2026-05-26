@@ -6,7 +6,7 @@ Liquid-Glass-Dark-uix:
       secondary-background-color: rgb(84, 80, 76)
       app-header-background-color: rgba(84, 80, 76, 0.3)
       ha-card-background: rgba(128, 128, 128, 0.3)
-      app-theme-color: rgb(122, 114, 106) # Average header color, used on the top of the browser
+      app-theme-color: rgb(122, 114, 106)
     dark:
       background-image: "center / cover no-repeat fixed url('https://raw.githubusercontent.com/Nezz/homeassistant-visionos-theme/1.1/themes/night.jpg')"
       primary-background-color: rgb(25, 24, 22)
@@ -16,15 +16,15 @@ Liquid-Glass-Dark-uix:
       app-theme-color: rgb(0, 0, 0)
   # Global
   lovelace-background: var(--background-image)
-  light-primary-color: rgb(241, 241, 241) # Icons on sidebar
-  divider-color: rgba(152, 152, 157, 0.3) # from Apple systemGray dark mode
+  light-primary-color: rgb(241, 241, 241)
+  divider-color: rgba(152, 152, 157, 0.3)
   accent-color: var(--primary-color)
   # Text
   primary-text-color: rgba(255, 255, 255, 0.96)
   secondary-text-color: "#d3d3d3"
   ha-color-text-secondary: var(--secondary-text-color)
   text-primary-color: var(--primary-text-color)
-  disabled-text-color: rgba(208, 208, 208, 0.5) # XXX: https://github.com/basnijholt/lovelace-ios-dark-mode-theme/issues/2
+  disabled-text-color: rgba(208, 208, 208, 0.5)
   text-dark-color: var(--primary-text-color)
   # Sidebar Menu
   sidebar-background-color: var(--secondary-background-color)
@@ -38,12 +38,12 @@ Liquid-Glass-Dark-uix:
   state-icon-active-color: var(--yellow-color)
   state-icon-unavailable-color: var(--disabled-text-color)
   state-inactive-color: var(--disabled-text-color)
-  paper-item-icon-active-color: var(--state-icon-active-color) # see https://github.com/basnijholt/lovelace-ios-dark-mode-theme/issues/30
+  paper-item-icon-active-color: var(--state-icon-active-color)
   # Sliders
   paper-slider-knob-color: "#FFFFFF"
   paper-slider-knob-start-color: var(--paper-slider-knob-color)
   paper-slider-pin-color: var(--paper-slider-knob-color)
-  paper-slider-active-color: "#0984ff" # from Apple systemBlue dark mode
+  paper-slider-active-color: "#0984ff"
   paper-slider-secondary-color: var(--paper-slider-knob-color)
   paper-slider-container-color: rgba(255, 255, 255, 0.5)
   paper-slider-font-color: "#000"
@@ -51,14 +51,14 @@ Liquid-Glass-Dark-uix:
   # Labels
   label-badge-background-color: "#23232E"
   label-badge-text-color: "#F1F1F1"
-  label-badge-red: rgba(255, 159, 9, 0.7) # from Apple systemOrange dark mode
+  label-badge-red: rgba(255, 159, 9, 0.7)
   # Cards
-  card-background-color: var(--secondary-background-color) # Data table background
+  card-background-color: var(--secondary-background-color)
   paper-listbox-background-color: var(--primary-background-color)
   ha-card-border-radius: 20px
   paper-card-background-color: var(--ha-card-background)
-  rgb-card-background-color: rgb(10, 10, 10) # see https://github.com/basnijholt/lovelace-ios-themes/issues/60
-  ha-card-border-width: 0 # https://github.com/basnijholt/lovelace-ios-dark-mode-theme/issues/82#event-7732695357
+  rgb-card-background-color: rgb(10, 10, 10)
+  ha-card-border-width: 0
   ha-card-backdrop-filter: blur(20px)
   ha-card-box-shadow: 0.5px 0.5px 1px 0px rgba(255, 255, 255, 0.40) inset, -0.5px -0.5px 1px 0px rgba(255, 255, 255, 0.10) inset, 0px 1px 2px 0px rgba(0, 0, 0, 0.10)
   # Toggles
@@ -108,14 +108,14 @@ Liquid-Glass-Dark-uix:
   ha-color-primary-90: "#ffebcc"
   ha-color-primary-95: "#fff5e6"
   # Other
-  paper-dialog-background-color: rgba(55, 55, 55, 0.8) # e.g., background of more-info
-  paper-item-icon-color: white # also should mini-media-player icon white (but doesn't work by itself)
+  paper-dialog-background-color: rgba(55, 55, 55, 0.8)
+  paper-item-icon-color: white
   more-info-header-background: rgba(25, 25, 25, 0.5)
-  lumo-body-text-color: var(--primary-text-color) # see https://github.com/basnijholt/lovelace-ios-dark-mode-theme/issues/42
+  lumo-body-text-color: var(--primary-text-color)
   markdown-code-background-color: "#464646"
   code-editor-background-color: "#161616"
-  clear-background-color: var(--ha-card-background) # see https://github.com/basnijholt/lovelace-ios-themes/issues/64
-  mdc-theme-surface: var(--secondary-background-color) # this should be opaque as it's used by default for many overlays
+  clear-background-color: var(--ha-card-background)
+  mdc-theme-surface: var(--secondary-background-color)
   material-background-color: var(--secondary-background-color)
   mdc-checkbox-unchecked-color: "#FFF"
   mdc-radio-unchecked-color: "#FFF"
@@ -123,7 +123,6 @@ Liquid-Glass-Dark-uix:
   mcg-title-letter-spacing: .15em
   mini-media-player-base-color: white
   mini-media-player-icon-color: white
-  # Added for https://github.com/basnijholt/lovelace-ios-dark-mode-theme/issues/72
   input-ink-color: var(--primary-text-color)
   input-fill-color: transparent
   input-disabled-fill-color: transparent
@@ -133,31 +132,78 @@ Liquid-Glass-Dark-uix:
   input-idle-line-color: var(--secondary-text-color)
   input-hover-line-color: var(--secondary-text-color)
   codemirror-property: var(--accent-color)
-  md-list-container-color: none # ha-md-list already has a card background
+  md-list-container-color: none
   # Dropdown
   wa-shadow-m: var(--ha-card-box-shadow)
   wa-border-radius-s: 16px
   wa-border-radius-m: var(--ha-card-border-radius)
   wa-border-width-s: 0px
-  ha-color-on-neutral-normal: var(--primary-text-color) # icon color
-  wa-color-neutral-fill-normal: "#FFFFFF14" # hover color
+  ha-color-on-neutral-normal: var(--primary-text-color)
+  wa-color-neutral-fill-normal: "#FFFFFF14"
   ha-color-form-background: var(--ha-card-background)
   ha-color-form-background-hover: var(--ha-card-background)
   ha-color-form-background-disabled: var(--ha-card-background)
-  ha-color-fill-primary-quiet-resting: rgba(255, 255, 255, 0.12) # selection color
-  ha-color-fill-primary-quiet-hover: rgba(255, 255, 255, 0.2) # selection hover color
+  ha-color-fill-primary-quiet-resting: rgba(255, 255, 255, 0.12)
+  ha-color-fill-primary-quiet-hover: rgba(255, 255, 255, 0.2)
 
-  card-mod-theme: "Liquid-Glass-Dark-uix"
-  card-mod-drawer: |
-    .mdc-drawer {
-      background-color: var(--app-header-background-color) !important;
-      backdrop-filter: var(--ha-card-backdrop-filter);
-    }
-  card-mod-sidebar: |
-    :host {
-      background: none !important;
-    }
-  card-mod-card: |
+  # ========================================================
+  # UIX (replaces card-mod)
+  # ========================================================
+  uix-theme: Liquid-Glass-Dark-uix  
+
+  # Reusable Jinja2 macros available to all cards/badges
+  uix-macros-yaml: |
+    pulse_animation:
+      params:
+        - entity_id
+      template: >-
+        {%- set p = states(entity_id) | float(0) -%}
+        {%- if p < 0 -%}badgePulseGreen 1.5s ease-in-out infinite
+        {%- elif p >= 4000 -%}badgePulseRed 1.2s ease-in-out infinite
+        {%- elif p >= 100 -%}badgePulseYellow 1.8s ease-in-out infinite
+        {%- else -%}none
+        {%- endif -%}
+    pulse_border_color:
+      params:
+        - entity_id
+      template: >-
+        {%- set p = states(entity_id) | float(0) -%}
+        {%- if p < 0 -%}rgba(0, 255, 136, 0.9)
+        {%- elif p >= 4000 -%}rgba(255, 59, 48, 0.95)
+        {%- elif p >= 1500 -%}rgba(255, 214, 0, 0.95)
+        {%- else -%}transparent
+        {%- endif -%}
+    pulse_text_color:
+      params:
+        - entity_id
+      template: >-
+        {%- set p = states(entity_id) | float(0) -%}
+        {%- if p < 0 -%}#00ff88
+        {%- elif p < 4000 -%}#FFD600
+        {%- else -%}#ff3b30
+        {%- endif -%}
+
+  # Inject keyframes into mushroom-badge's own shadow root
+  uix-badge-yaml: |
+    $ mushroom-badge $: |
+      @keyframes badgePulseGreen {
+        0%   { filter: drop-shadow(0 0 2px rgba(0,255,136,0.35)) drop-shadow(0 0 6px rgba(0,255,136,0.20)); }
+        50%  { filter: drop-shadow(0 0 8px rgba(0,255,136,0.90)) drop-shadow(0 0 18px rgba(0,255,136,0.60)) drop-shadow(0 0 28px rgba(0,255,136,0.35)); }
+        100% { filter: drop-shadow(0 0 2px rgba(0,255,136,0.35)) drop-shadow(0 0 6px rgba(0,255,136,0.20)); }
+      }
+      @keyframes badgePulseYellow {
+        0%   { filter: drop-shadow(0 0 2px rgba(255,214,0,0.30)) drop-shadow(0 0 6px rgba(255,214,0,0.16)); }
+        50%  { filter: drop-shadow(0 0 8px rgba(255,214,0,0.75)) drop-shadow(0 0 18px rgba(255,214,0,0.42)) drop-shadow(0 0 26px rgba(255,214,0,0.22)); }
+        100% { filter: drop-shadow(0 0 2px rgba(255,214,0,0.30)) drop-shadow(0 0 6px rgba(255,214,0,0.16)); }
+      }
+      @keyframes badgePulseRed {
+        0%   { filter: drop-shadow(0 0 2px rgba(255,59,48,0.35)) drop-shadow(0 0 6px rgba(255,59,48,0.20)); }
+        50%  { filter: drop-shadow(0 0 8px rgba(255,59,48,0.92)) drop-shadow(0 0 18px rgba(255,59,48,0.62)) drop-shadow(0 0 28px rgba(255,59,48,0.36)); }
+        100% { filter: drop-shadow(0 0 2px rgba(255,59,48,0.35)) drop-shadow(0 0 6px rgba(255,59,48,0.20)); }
+      }
+
+  # Card styling (equivalent of card-mod-card)
+  uix-card: |
     ha-card {
       backdrop-filter: unset !important;
     }
@@ -179,16 +225,12 @@ Liquid-Glass-Dark-uix:
     :host(hui-heading-card) ha-card::before {
       content: none !important;
     }
-
-    /* Energy dashboard */
     .mdc-data-table,
     .mdc-data-table__row,
     .mdc-data-table__header-cell,
     ha-sankey-chart {
       background: none !important;
     }
-
-    /* Markdown card with text_only */
     ha-card.text-only {
       background: none !important;
       backdrop-filter: none !important;
@@ -197,8 +239,6 @@ Liquid-Glass-Dark-uix:
     ha-card.text-only::before {
       content: none !important;
     }
-
-    /* Mushroom title card */
     :host(mushroom-title-card) ha-card {
       background: none !important;
       backdrop-filter: none !important;
@@ -206,8 +246,6 @@ Liquid-Glass-Dark-uix:
     :host(mushroom-title-card) ha-card::before {
       content: none !important;
     }
-
-    /* Mushroom chips card */
     :host(mushroom-chips-card) ha-card {
       background: none !important;
       backdrop-filter: none !important;
@@ -219,3 +257,15 @@ Liquid-Glass-Dark-uix:
       backdrop-filter: none !important;
     }
 
+  # Drawer styling (equivalent of card-mod-drawer)
+  uix-drawer: |
+    .mdc-drawer {
+      background-color: var(--app-header-background-color) !important;
+      backdrop-filter: var(--ha-card-backdrop-filter);
+    }
+
+  # Sidebar styling (equivalent of card-mod-sidebar)
+  uix-sidebar: |
+    :host {
+      background: none !important;
+    }
