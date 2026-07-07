@@ -1,141 +1,42 @@
 type: custom:mushroom-template-badge
 entity: sensor.p1_meter_power
 icon: |-
-  {% if states('sensor.p1_meter_power') | float(0) < 0 %}
+  {% if states(config.entity) | float(0) < 0 %}
     mdi:solar-power
   {% else %}
     mdi:flash
   {% endif %}
 content: >-
-  {% set p = states('sensor.p1_meter_power') | float(0) %} {{ p | round(0) }} W
-  {% if p < 0 %}
+  {% set p = states(config.entity) | float(0) %} {{ p | round(0) }} W {% if p <
+  0 %}
     · Gratis elektriciteit
   {% elif p >= 4000 %}
     · Hoog verbruik
-  {% elif p >= 1500 %}
+  {% elif p >= 1000 %}
     · Middel verbruik
   {% endif %}
 color: |-
-  {% set p = states('sensor.p1_meter_power') | float(0) %}
-  {% if p < 0 %}
-    green
-  {% elif p < 1500 %}
-    yellow
-  {% elif p < 4000 %}
-    yellow
-  {% else %}
-    red
-  {% endif %}
-card_mod:
+  {% set p = states(config.entity) | float(0) %}
+  {% if p < 0 %}green
+  {% elif p < 4000 %}yellow
+  {% else %}red{% endif %}
+uix:
   style: |
-    {% set p = states('sensor.p1_meter_power') | float(0) %}
-
     :host {
-      {% if p < 0 %}
-        animation: badgePulseGreen 1.5s ease-in-out infinite;
-      {% elif p >= 4000 %}
-        animation: badgePulseRed 1.2s ease-in-out infinite;
-      {% elif p >= 1500 %}
-        animation: badgePulseYellow 1.8s ease-in-out infinite;
-      {% else %}
-        animation: none;
-      {% endif %}
       border-radius: 999px;
     }
-
-    mushroom-badge {
-      width: 260px;
-      min-width: 260px;
+    div.badge {
+      width: 100%;
+      min-width: 50px;
       max-width: 260px;
       justify-content: center;
       border-radius: 999px;
       overflow: visible !important;
       position: relative;
-      border: 2px solid
-        {% if p < 0 %}
-          rgba(0, 255, 136, 0.9)
-        {% elif p >= 4000 %}
-          rgba(255, 59, 48, 0.95)
-        {% elif p >= 1500 %}
-          rgba(255, 214, 0, 0.95)
-        {% else %}
-          transparent
-        {% endif %};
-      filter:
-        {% if p < 0 %}
-          drop-shadow(0 0 4px rgba(0,255,136,0.70))
-          drop-shadow(0 0 10px rgba(0,255,136,0.55))
-          drop-shadow(0 0 18px rgba(0,255,136,0.35))
-        {% elif p >= 4000 %}
-          drop-shadow(0 0 4px rgba(255,59,48,0.75))
-          drop-shadow(0 0 10px rgba(255,59,48,0.55))
-          drop-shadow(0 0 18px rgba(255,59,48,0.35))
-        {% elif p >= 1500 %}
-          drop-shadow(0 0 4px rgba(255,214,0,0.70))
-          drop-shadow(0 0 10px rgba(255,214,0,0.50))
-          drop-shadow(0 0 18px rgba(255,214,0,0.28))
-        {% else %}
-          none
-        {% endif %};
+      border: 2px solid {{ pulse_border_color(config.entity) }};
+      animation: {{ pulse_animation(config.entity) }};
     }
-
     .content {
       font-weight: 600;
-      {% if p < 0 %}
-        color: #00ff88 !important;
-      {% elif p < 1500 %}
-        color: #FFD600 !important;
-      {% elif p < 4000 %}
-        color: #FFD600 !important;
-      {% else %}
-        color: #ff3b30 !important;
-      {% endif %}
-    }
-
-    @keyframes badgePulseGreen {
-      0% {
-        filter: drop-shadow(0 0 2px rgba(0,255,136,0.35))
-                drop-shadow(0 0 6px rgba(0,255,136,0.20));
-      }
-      50% {
-        filter: drop-shadow(0 0 8px rgba(0,255,136,0.90))
-                drop-shadow(0 0 18px rgba(0,255,136,0.60))
-                drop-shadow(0 0 28px rgba(0,255,136,0.35));
-      }
-      100% {
-        filter: drop-shadow(0 0 2px rgba(0,255,136,0.35))
-                drop-shadow(0 0 6px rgba(0,255,136,0.20));
-      }
-    }
-
-    @keyframes badgePulseYellow {
-      0% {
-        filter: drop-shadow(0 0 2px rgba(255,214,0,0.30))
-                drop-shadow(0 0 6px rgba(255,214,0,0.16));
-      }
-      50% {
-        filter: drop-shadow(0 0 8px rgba(255,214,0,0.75))
-                drop-shadow(0 0 18px rgba(255,214,0,0.42))
-                drop-shadow(0 0 26px rgba(255,214,0,0.22));
-      }
-      100% {
-        filter: drop-shadow(0 0 2px rgba(255,214,0,0.30))
-                drop-shadow(0 0 6px rgba(255,214,0,0.16));
-      }
-    }
-
-    @keyframes badgePulseRed {
-      0% {
-        filter: drop-shadow(0 0 2px rgba(255,59,48,0.35))
-                drop-shadow(0 0 6px rgba(255,59,48,0.20));
-      }
-      50% {
-        filter: drop-shadow(0 0 8px rgba(255,59,48,0.92))
-                drop-shadow(0 0 18px rgba(255,59,48,0.62))
-                drop-shadow(0 0 28px rgba(255,59,48,0.36));
-      }
-      100% {
-        filter: drop-shadow(0 0 2px rgba(255,59,48,0.35))
-                drop-shadow(0 0 6px rgba(255,59,48,0.20));
-      }
+      color: {{ pulse_text_color(config.entity) }} !important;
     }
