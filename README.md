@@ -41,4 +41,3 @@ Based on [Bas Nijholt's iOS Themes](https://github.com/basnijholt/lovelace-ios-t
 
 Dropdown fixes from [Wessam Lauf's Frosted Glass Theme](https://github.com/wessamlauf/homeassistant-frosted-glass-themes)
 
-.
