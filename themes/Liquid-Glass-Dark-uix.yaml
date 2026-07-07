@@ -145,6 +145,10 @@ Liquid-Glass-Dark-uix:
   ha-color-form-background-disabled: var(--ha-card-background)
   ha-color-fill-primary-quiet-resting: rgba(255, 255, 255, 0.12)
   ha-color-fill-primary-quiet-hover: rgba(255, 255, 255, 0.2)
+  ha-tooltip-background-color: "#000"
+  ha-tooltip-text-color: var(--primary-text-color)
+  wa-tooltip-background-color: var(--ha-tooltip-background-color)
+  wa-tooltip-content-color: var(--ha-tooltip-text-color)
 
   # =====================
   # UIX
